@@ -42,6 +42,33 @@ float h_lowest<float>() { return -FLT_MAX; }
 * @note Handles device memory management (allocate/copy/free) internally. Errors should be thrown.
 */
 template <typename T>
+__global__ void count_equal_atomic_kernel(const T* __restrict__ in,
+                                          size_t n,
+                                          const T* __restrict__ d_M,
+                                          unsigned int* __restrict__ d_cnt) {
+    const size_t gtid = (size_t)blockIdx.x * blockDim.x + threadIdx.x;
+    const size_t stride = (size_t)blockDim.x * gridDim.x;
+    const T M = *d_M;
+    for (size_t i = gtid; i < n; i += stride) {
+        if (in[i] == M) atomicAdd(d_cnt, 1u);
+    }
+}
+
+
+
+template <typename T>
+__global__ void mask_equal_kernel(T* d_input, size_t n, const T* d_max) {
+  // 每个线程检查一个元素是否等于最大值
+  size_t tid = blockIdx.x * blockDim.x + threadIdx.x;
+  const T max = *d_max;
+  for (size_t i = tid; i < n; i += gridDim.x * blockDim.x) {
+    if (d_input[i] == max) {
+      d_input[i] = d_lowest<T>();  // 将等于
+    }
+  }
+}
+
+template <typename T>
 __device__ T max_warp_reduce(T local_max){
 #pragma unroll
 for (int offset = warpSize / 2; offset > 0; offset /= 2){
@@ -52,15 +79,6 @@ for (int offset = warpSize / 2; offset > 0; offset /= 2){
 }
 return local_max;
 }
-template <typename T>
-__device__ T sum_warp_reduce(T local_sum){
-  #pragma unroll
-  for (int offset = warpSize / 2; offset > 0; offset /= 2){
-      T y = __shfl_down_sync(0xFFFFFFFF, local_sum, offset);
-      local_sum += y;
-  }
-  return local_sum;
-}
 
 
 template <typename T>
@@ -70,8 +88,6 @@ __global__ void max_warp_shuffle_first_pass_kernel(T *intermediate, const T *inp
   size_t tid = threadIdx.x;
   size_t idx = blockIdx.x * blockDim.x + tid;
   size_t stride = gridDim.x * blockDim.x;
-  size_t lane_id = tid % 32;
-  size_t warp_id = tid / 32;
   //thread
   T local_max = d_lowest<T>();
   //grid stride
@@ -84,6 +100,8 @@ __global__ void max_warp_shuffle_first_pass_kernel(T *intermediate, const T *inp
     // printf("Debug: first pass warp reduce\n");
   }
   T warp_max =  max_warp_reduce(local_max);
+  size_t lane_id = tid % 32;
+  size_t warp_id = tid / 32;
   if(lane_id == 0){
     smem[warp_id] = warp_max;
   }
@@ -177,151 +195,13 @@ void max_two_pass_kernel(T *d_out, const T *d_input, size_t n,const dim3& grid, 
   CUDA_CHECK(cudaGetLastError());
   CUDA_CHECK(cudaFree(d_intermediate));
 }
-
-
-template <typename T>
-__global__ void count_equal_kernel(const T* __restrict__ in,
-                                          size_t n,
-                                          const T* __restrict__ d_M,
-                                          unsigned int* __restrict__ d_cnt) {
-    const size_t gtid = (size_t)blockIdx.x * blockDim.x + threadIdx.x;
-    const size_t stride = (size_t)blockDim.x * gridDim.x;
-    const T M = *d_M;
-    for (size_t i = gtid; i < n; i += stride) {
-        if (in[i] == M) atomicAdd(d_cnt, 1u);
-    }
-}
-
-
-// template <typename T>
-// __global__ void count_equal_reduce_first_pass_kernel(
-//     const T* __restrict__ in,
-//     size_t n,
-//     const T* __restrict__ d_M,
-//     unsigned int* __restrict__ block_counts) {
-    
-//     extern __shared__ unsigned int smem[];
-    
-//     const size_t tid = threadIdx.x;
-//     const size_t gtid = blockIdx.x * blockDim.x + tid;
-//     const size_t stride = gridDim.x * blockDim.x;
-//     const size_t lane_id = tid % 32;
-//     const size_t warp_id = tid / 32;
-//     const T M = *d_M;
-    
-//     // 每个线程计算local count
-//     unsigned int local_count = 0;
-//     for (size_t i = gtid; i < n; i += stride) {
-//         if (in[i] == M) {
-//             local_count++;
-//         }
-//     }
-//     //warp reduce
-//     T warp_count = sum_warp_reduce(local_count);
-//     if(lane_id == 0){
-//       smem[warp_id] = warp_count;
-//     }
-//     __syncthreads();
-//     // Block-wide reduction
-//     if (tid < 32){
-//         //how many warps in this block
-//         unsigned int block_count = (tid < (blockDim.x +31) / 32) ? smem[tid] : 0;   
-//         block_count = sum_warp_reduce(block_count);
-//         //store in intermediate
-//         if (tid == 0) {
-//           block_counts[blockIdx.x] = block_count;
-//         }
-//     }
-//   }
-
-// template <typename T>
-// __global__ void count_equal_reduce_second_pass_kernel(
-//     const unsigned int* __restrict__ block_counts,
-//     size_t num_blocks,
-//     unsigned int* __restrict__ final_count) {
-    
-//     extern __shared__ unsigned int smem[];
-    
-//     const size_t tid = threadIdx.x;
-    
-//     // 每个线程加载多个block的结果
-//     unsigned int local_sum = 0;
-//     for (size_t i = tid; i < num_blocks; i += blockDim.x) {
-//         local_sum += block_counts[i];
-//     }
-    
-//     // 写入共享内存
-//     smem[tid] = local_sum;
-//     __syncthreads();
-    
-//     // Block-wide reduction
-//     for (int s = blockDim.x / 2; s > 0; s >>= 1) {
-//         if (tid < s) {
-//             smem[tid] += smem[tid + s];
-//         }
-//         __syncthreads();
-//     }
-    
-//     // 写入最终结果
-//     if (tid == 0) {
-//         *final_count = smem[0];
-//     }
-// }
-
-// template <typename T>
-// void count_equal_two_pass_kernel(
-//     unsigned int* d_final_count,
-//     const T* d_input,
-//     size_t n,
-//     const T* d_max,
-//     const dim3& grid,
-//     const dim3& block) {
-    
-//     // 分配中间结果内存
-//     unsigned int* d_block_counts;
-//     CUDA_CHECK(cudaMalloc(&d_block_counts, grid.x * sizeof(unsigned int)));
-    
-//     // 第一遍：每个block进行reduction
-//     const size_t smem_size_1 = block.x * sizeof(unsigned int);
-//     count_equal_reduce_first_pass_kernel<<<grid, block, smem_size_1>>>(
-//         d_input, n, d_max, d_block_counts);
-//     CUDA_CHECK(cudaGetLastError());
-    
-//     // 第二遍：对block结果进行reduction
-//     dim3 grid2(1);
-//     dim3 block2(min(grid.x, block.x));  // 不超过原block size
-//     const size_t smem_size_2 = block2.x * sizeof(unsigned int);
-    
-//     count_equal_reduce_second_pass_kernel<T><<<grid2, block2, smem_size_2>>>(
-//         d_block_counts, grid.x, d_final_count);
-//     CUDA_CHECK(cudaGetLastError());
-    
-//     // 清理中间内存
-//     CUDA_CHECK(cudaFree(d_block_counts));
-// }
-
-
-
-template <typename T>
-__global__ void mask_equal_kernel(T* d_input, size_t n, const T* d_max) {
-  // 每个线程检查一个元素是否等于最大值
-  size_t tid = blockIdx.x * blockDim.x + threadIdx.x;
-  const T max = *d_max;
-  for (size_t i = tid; i < n; i += gridDim.x * blockDim.x) {
-    if (d_input[i] == max) {
-      d_input[i] = d_lowest<T>();  // 将等于
-    }
-  }
-}
-
-
 template <typename T>
 T kthLargest(const std::vector<T>& h_input, size_t k) {
   static int call_count = 0;
   call_count++;
   
-  // std::cout << "=== kthLargest call #" << call_count << " ===" << std::endl;
-  // std::cout << "Input size: " << h_input.size() << ", k: " << k << std::endl;
+  std::cout << "=== kthLargest call #" << call_count << " ===" << std::endl;
+  std::cout << "Input size: " << h_input.size() << ", k: " << k << std::endl;
   // std::cout << "h_input: ";
   // for (const auto& val : h_input) {
   //   std::cout << val << " ";
@@ -357,8 +237,8 @@ T kthLargest(const std::vector<T>& h_input, size_t k) {
     CUDA_CHECK(cudaDeviceSynchronize());
 
     CUDA_CHECK(cudaMemset(d_cnt, 0, sizeof(unsigned int)));
-    count_equal_kernel<T><<<grid, block>>>(d_input, n, d_max, d_cnt);
-    // count_equal_kernel(d_cnt, d_input, n, d_max, grid, block);
+    count_equal_atomic_kernel<T><<<grid, block>>>(d_input, n, d_max, d_cnt);
+
     CUDA_CHECK(cudaGetLastError());
     CUDA_CHECK(cudaDeviceSynchronize());                            // 调试期建议加
     CUDA_CHECK(cudaMemcpy(&kthLargestValue, d_max, sizeof(T), cudaMemcpyDeviceToHost));
@@ -380,8 +260,8 @@ T kthLargest(const std::vector<T>& h_input, size_t k) {
   cudaFree(d_input);
   cudaFree(d_max);
   cudaFree(d_cnt);
-  // std::cout << "=== Call #" << call_count << " completed ===" << std::endl;
-  // std::cout << "Result: " << kthLargestValue << std::endl;
+  std::cout << "=== Call #" << call_count << " completed ===" << std::endl;
+  std::cout << "Result: " << kthLargestValue << std::endl;
   return kthLargestValue;
   // return T(-1000);
 }
@@ -402,6 +282,15 @@ T kthLargest(const std::vector<T>& h_input, size_t k) {
  * @param[in] is_causal Whether to apply causal masking
  */
 
+template <typename T>
+__device__ T sum_warp_reduce(T local_sum){
+  #pragma unroll
+  for (int offset = warpSize / 2; offset > 0; offset /= 2){
+      T y = __shfl_down_sync(0xFFFFFFFF, local_sum, offset);
+      local_sum += y;
+  }
+  return local_sum;
+}
 
 template <typename T, int B_r, int B_c, int D_HEAD>
 __global__ void flash_attention_kernel(
@@ -423,7 +312,7 @@ __global__ void flash_attention_kernel(
     const int heads_per_group = query_heads / kv_heads;
     const size_t q_batch_stride = (size_t)target_seq_len * query_heads * D_HEAD;
     const size_t kv_batch_stride = (size_t)src_seq_len * kv_heads * D_HEAD;
-    //.z->batch .y->head .x->row
+
     const int batch_id = blockIdx.z;
     const int query_head_idx = blockIdx.y;
     const int kv_head_idx = query_head_idx / heads_per_group;
@@ -682,8 +571,8 @@ void flashAttention(const std::vector<T>& h_q, const std::vector<T>& h_k,
       }
       case 8: {
           constexpr int D_HEAD = 8;
-          constexpr int BLOCK_SIZE_M = 64;
-          constexpr int BLOCK_SIZE_N = 64;
+          constexpr int BLOCK_SIZE_M = 32;
+          constexpr int BLOCK_SIZE_N = 32;
           dim3 grid_dim((target_seq_len + BLOCK_SIZE_M - 1) / BLOCK_SIZE_M, query_heads, batch_size);
           dim3 block_dim(128);
           const float scale = 1.0f / sqrt(static_cast<float>(D_HEAD));
@@ -692,8 +581,8 @@ void flashAttention(const std::vector<T>& h_q, const std::vector<T>& h_k,
       }
       case 16: {
           constexpr int D_HEAD = 16;
-          constexpr int BLOCK_SIZE_M = 64;
-          constexpr int BLOCK_SIZE_N = 64;
+          constexpr int BLOCK_SIZE_M = 32;
+          constexpr int BLOCK_SIZE_N = 32;
           dim3 grid_dim((target_seq_len + BLOCK_SIZE_M - 1) / BLOCK_SIZE_M, query_heads, batch_size);
           dim3 block_dim(128);
           const float scale = 1.0f / sqrt(static_cast<float>(D_HEAD));
@@ -702,8 +591,8 @@ void flashAttention(const std::vector<T>& h_q, const std::vector<T>& h_k,
       }
       case 24: {
       constexpr int D_HEAD = 24;
-      constexpr int BLOCK_SIZE_M = 64;  // 适中的块大小
-      constexpr int BLOCK_SIZE_N = 64;
+      constexpr int BLOCK_SIZE_M = 32;  // 适中的块大小
+      constexpr int BLOCK_SIZE_N = 32;
       dim3 grid_dim((target_seq_len + BLOCK_SIZE_M - 1) / BLOCK_SIZE_M, query_heads, batch_size);
       dim3 block_dim(128);
       const float scale = 1.0f / sqrt(static_cast<float>(D_HEAD));

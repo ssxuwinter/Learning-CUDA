@@ -1,0 +1,3108 @@
+=== Compiling student code (src/kernels.cu) ===
+nvcc                   -std=c++17 -O0         -c src/kernels.cu -o src/kernels.o
+=== Linking executable (student code + test logic) ===
+nvcc                   -std=c++17 -O0         -o test_kernels src/kernels.o tester/tester.o
+=== Running tests (output from tester.o) ===
+=== Verbose mode: Enabled (using '--verbose            ') ===
+./test_kernels     	   --verbose            
+Running tests on device: NVIDIA H800
+Max shared memory per block: 49152 bytes
+Malloc heap size: 134217728 bytes
+============================================================
+
+============================================================
+=== Running kthLargest Tests ===
+============================================================
+=== kthLargest call #1 ===
+Input size: 1, k: 0
+=== kthLargest call #2 ===
+Input size: 1, k: 0
+=== kthLargest call #3 ===
+Input size: 1, k: 0
+=== kthLargest call #4 ===
+Input size: 1, k: 0
+=== kthLargest call #5 ===
+Input size: 1, k: 0
+=== kthLargest call #6 ===
+Input size: 1, k: 0
+=== kthLargest call #7 ===
+Input size: 1, k: 0
+=== kthLargest call #8 ===
+Input size: 1, k: 0
+=== kthLargest call #9 ===
+Input size: 1, k: 0
+=== kthLargest call #10 ===
+Input size: 1, k: 0
+=== kthLargest call #11 ===
+Input size: 1, k: 0
+Testase #1
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.000758 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #1 ===
+Input size: 1, k: 0
+=== kthLargest call #2 ===
+Input size: 1, k: 0
+=== kthLargest call #3 ===
+Input size: 1, k: 0
+=== kthLargest call #4 ===
+Input size: 1, k: 0
+=== kthLargest call #5 ===
+Input size: 1, k: 0
+=== kthLargest call #6 ===
+Input size: 1, k: 0
+=== kthLargest call #7 ===
+Input size: 1, k: 0
+=== kthLargest call #8 ===
+Input size: 1, k: 0
+=== kthLargest call #9 ===
+Input size: 1, k: 0
+=== kthLargest call #10 ===
+Input size: 1, k: 0
+=== kthLargest call #11 ===
+Input size: 1, k: 0
+Testase #1
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.000726 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #12 ===
+Input size: 1, k: 1
+=== Call #12 completed ===
+Result: 374478
+=== kthLargest call #13 ===
+Input size: 1, k: 1
+=== Call #13 completed ===
+Result: 374478
+=== kthLargest call #14 ===
+Input size: 1, k: 1
+=== Call #14 completed ===
+Result: 374478
+=== kthLargest call #15 ===
+Input size: 1, k: 1
+=== Call #15 completed ===
+Result: 374478
+=== kthLargest call #16 ===
+Input size: 1, k: 1
+=== Call #16 completed ===
+Result: 374478
+=== kthLargest call #17 ===
+Input size: 1, k: 1
+=== Call #17 completed ===
+Result: 374478
+=== kthLargest call #18 ===
+Input size: 1, k: 1
+=== Call #18 completed ===
+Result: 374478
+=== kthLargest call #19 ===
+Input size: 1, k: 1
+=== Call #19 completed ===
+Result: 374478
+=== kthLargest call #20 ===
+Input size: 1, k: 1
+=== Call #20 completed ===
+Result: 374478
+=== kthLargest call #21 ===
+Input size: 1, k: 1
+=== Call #21 completed ===
+Result: 374478
+=== kthLargest call #22 ===
+Input size: 1, k: 1
+=== Call #22 completed ===
+Result: 374478
+Testase #2
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.213686 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #12 ===
+Input size: 1, k: 1
+=== Call #12 completed ===
+Result: -24.466515
+=== kthLargest call #13 ===
+Input size: 1, k: 1
+=== Call #13 completed ===
+Result: -24.466515
+=== kthLargest call #14 ===
+Input size: 1, k: 1
+=== Call #14 completed ===
+Result: -24.466515
+=== kthLargest call #15 ===
+Input size: 1, k: 1
+=== Call #15 completed ===
+Result: -24.466515
+=== kthLargest call #16 ===
+Input size: 1, k: 1
+=== Call #16 completed ===
+Result: -24.466515
+=== kthLargest call #17 ===
+Input size: 1, k: 1
+=== Call #17 completed ===
+Result: -24.466515
+=== kthLargest call #18 ===
+Input size: 1, k: 1
+=== Call #18 completed ===
+Result: -24.466515
+=== kthLargest call #19 ===
+Input size: 1, k: 1
+=== Call #19 completed ===
+Result: -24.466515
+=== kthLargest call #20 ===
+Input size: 1, k: 1
+=== Call #20 completed ===
+Result: -24.466515
+=== kthLargest call #21 ===
+Input size: 1, k: 1
+=== Call #21 completed ===
+Result: -24.466515
+=== kthLargest call #22 ===
+Input size: 1, k: 1
+=== Call #22 completed ===
+Result: -24.466515
+Testase #2
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.204100 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #23 ===
+Input size: 100, k: 21313
+=== kthLargest call #24 ===
+Input size: 100, k: 21313
+=== kthLargest call #25 ===
+Input size: 100, k: 21313
+=== kthLargest call #26 ===
+Input size: 100, k: 21313
+=== kthLargest call #27 ===
+Input size: 100, k: 21313
+=== kthLargest call #28 ===
+Input size: 100, k: 21313
+=== kthLargest call #29 ===
+Input size: 100, k: 21313
+=== kthLargest call #30 ===
+Input size: 100, k: 21313
+=== kthLargest call #31 ===
+Input size: 100, k: 21313
+=== kthLargest call #32 ===
+Input size: 100, k: 21313
+=== kthLargest call #33 ===
+Input size: 100, k: 21313
+Testase #3
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.000842 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #23 ===
+Input size: 100, k: 21313
+=== kthLargest call #24 ===
+Input size: 100, k: 21313
+=== kthLargest call #25 ===
+Input size: 100, k: 21313
+=== kthLargest call #26 ===
+Input size: 100, k: 21313
+=== kthLargest call #27 ===
+Input size: 100, k: 21313
+=== kthLargest call #28 ===
+Input size: 100, k: 21313
+=== kthLargest call #29 ===
+Input size: 100, k: 21313
+=== kthLargest call #30 ===
+Input size: 100, k: 21313
+=== kthLargest call #31 ===
+Input size: 100, k: 21313
+=== kthLargest call #32 ===
+Input size: 100, k: 21313
+=== kthLargest call #33 ===
+Input size: 100, k: 21313
+Testase #3
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.000815 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #34 ===
+Input size: 10, k: 5
+=== Call #34 completed ===
+Result: 598618
+=== kthLargest call #35 ===
+Input size: 10, k: 5
+=== Call #35 completed ===
+Result: 598618
+=== kthLargest call #36 ===
+Input size: 10, k: 5
+=== Call #36 completed ===
+Result: 598618
+=== kthLargest call #37 ===
+Input size: 10, k: 5
+=== Call #37 completed ===
+Result: 598618
+=== kthLargest call #38 ===
+Input size: 10, k: 5
+=== Call #38 completed ===
+Result: 598618
+=== kthLargest call #39 ===
+Input size: 10, k: 5
+=== Call #39 completed ===
+Result: 598618
+=== kthLargest call #40 ===
+Input size: 10, k: 5
+=== Call #40 completed ===
+Result: 598618
+=== kthLargest call #41 ===
+Input size: 10, k: 5
+=== Call #41 completed ===
+Result: 598618
+=== kthLargest call #42 ===
+Input size: 10, k: 5
+=== Call #42 completed ===
+Result: 598618
+=== kthLargest call #43 ===
+Input size: 10, k: 5
+=== Call #43 completed ===
+Result: 598618
+=== kthLargest call #44 ===
+Input size: 10, k: 5
+=== Call #44 completed ===
+Result: 598618
+Testase #4
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.396561 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #34 ===
+Input size: 10, k: 5
+=== Call #34 completed ===
+Result: 20.133041
+=== kthLargest call #35 ===
+Input size: 10, k: 5
+=== Call #35 completed ===
+Result: 20.133041
+=== kthLargest call #36 ===
+Input size: 10, k: 5
+=== Call #36 completed ===
+Result: 20.133041
+=== kthLargest call #37 ===
+Input size: 10, k: 5
+=== Call #37 completed ===
+Result: 20.133041
+=== kthLargest call #38 ===
+Input size: 10, k: 5
+=== Call #38 completed ===
+Result: 20.133041
+=== kthLargest call #39 ===
+Input size: 10, k: 5
+=== Call #39 completed ===
+Result: 20.133041
+=== kthLargest call #40 ===
+Input size: 10, k: 5
+=== Call #40 completed ===
+Result: 20.133041
+=== kthLargest call #41 ===
+Input size: 10, k: 5
+=== Call #41 completed ===
+Result: 20.133041
+=== kthLargest call #42 ===
+Input size: 10, k: 5
+=== Call #42 completed ===
+Result: 20.133041
+=== kthLargest call #43 ===
+Input size: 10, k: 5
+=== Call #43 completed ===
+Result: 20.133041
+=== kthLargest call #44 ===
+Input size: 10, k: 5
+=== Call #44 completed ===
+Result: 20.133041
+Testase #4
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.397381 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #45 ===
+Input size: 133, k: 71
+=== Call #45 completed ===
+Result: 445777
+=== kthLargest call #46 ===
+Input size: 133, k: 71
+=== Call #46 completed ===
+Result: 445777
+=== kthLargest call #47 ===
+Input size: 133, k: 71
+=== Call #47 completed ===
+Result: 445777
+=== kthLargest call #48 ===
+Input size: 133, k: 71
+=== Call #48 completed ===
+Result: 445777
+=== kthLargest call #49 ===
+Input size: 133, k: 71
+=== Call #49 completed ===
+Result: 445777
+=== kthLargest call #50 ===
+Input size: 133, k: 71
+=== Call #50 completed ===
+Result: 445777
+=== kthLargest call #51 ===
+Input size: 133, k: 71
+=== Call #51 completed ===
+Result: 445777
+=== kthLargest call #52 ===
+Input size: 133, k: 71
+=== Call #52 completed ===
+Result: 445777
+=== kthLargest call #53 ===
+Input size: 133, k: 71
+=== Call #53 completed ===
+Result: 445777
+=== kthLargest call #54 ===
+Input size: 133, k: 71
+=== Call #54 completed ===
+Result: 445777
+=== kthLargest call #55 ===
+Input size: 133, k: 71
+=== Call #55 completed ===
+Result: 445777
+Testase #5
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       3.514180 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #45 ===
+Input size: 133, k: 71
+=== Call #45 completed ===
+Result: -10.279282
+=== kthLargest call #46 ===
+Input size: 133, k: 71
+=== Call #46 completed ===
+Result: -10.279282
+=== kthLargest call #47 ===
+Input size: 133, k: 71
+=== Call #47 completed ===
+Result: -10.279282
+=== kthLargest call #48 ===
+Input size: 133, k: 71
+=== Call #48 completed ===
+Result: -10.279282
+=== kthLargest call #49 ===
+Input size: 133, k: 71
+=== Call #49 completed ===
+Result: -10.279282
+=== kthLargest call #50 ===
+Input size: 133, k: 71
+=== Call #50 completed ===
+Result: -10.279282
+=== kthLargest call #51 ===
+Input size: 133, k: 71
+=== Call #51 completed ===
+Result: -10.279282
+=== kthLargest call #52 ===
+Input size: 133, k: 71
+=== Call #52 completed ===
+Result: -10.279282
+=== kthLargest call #53 ===
+Input size: 133, k: 71
+=== Call #53 completed ===
+Result: -10.279282
+=== kthLargest call #54 ===
+Input size: 133, k: 71
+=== Call #54 completed ===
+Result: -10.279282
+=== kthLargest call #55 ===
+Input size: 133, k: 71
+=== Call #55 completed ===
+Result: -10.279282
+Testase #5
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       3.496038 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #56 ===
+Input size: 1024, k: 512
+=== Call #56 completed ===
+Result: 503087
+=== kthLargest call #57 ===
+Input size: 1024, k: 512
+=== Call #57 completed ===
+Result: 503087
+=== kthLargest call #58 ===
+Input size: 1024, k: 512
+=== Call #58 completed ===
+Result: 503087
+=== kthLargest call #59 ===
+Input size: 1024, k: 512
+=== Call #59 completed ===
+Result: 503087
+=== kthLargest call #60 ===
+Input size: 1024, k: 512
+=== Call #60 completed ===
+Result: 503087
+=== kthLargest call #61 ===
+Input size: 1024, k: 512
+=== Call #61 completed ===
+Result: 503087
+=== kthLargest call #62 ===
+Input size: 1024, k: 512
+=== Call #62 completed ===
+Result: 503087
+=== kthLargest call #63 ===
+Input size: 1024, k: 512
+=== Call #63 completed ===
+Result: 503087
+=== kthLargest call #64 ===
+Input size: 1024, k: 512
+=== Call #64 completed ===
+Result: 503087
+=== kthLargest call #65 ===
+Input size: 1024, k: 512
+=== Call #65 completed ===
+Result: 503087
+=== kthLargest call #66 ===
+Input size: 1024, k: 512
+=== Call #66 completed ===
+Result: 503087
+Testase #6
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       24.294852 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #56 ===
+Input size: 1024, k: 512
+=== Call #56 completed ===
+Result: 1.124123
+=== kthLargest call #57 ===
+Input size: 1024, k: 512
+=== Call #57 completed ===
+Result: 1.124123
+=== kthLargest call #58 ===
+Input size: 1024, k: 512
+=== Call #58 completed ===
+Result: 1.124123
+=== kthLargest call #59 ===
+Input size: 1024, k: 512
+=== Call #59 completed ===
+Result: 1.124123
+=== kthLargest call #60 ===
+Input size: 1024, k: 512
+=== Call #60 completed ===
+Result: 1.124123
+=== kthLargest call #61 ===
+Input size: 1024, k: 512
+=== Call #61 completed ===
+Result: 1.124123
+=== kthLargest call #62 ===
+Input size: 1024, k: 512
+=== Call #62 completed ===
+Result: 1.124123
+=== kthLargest call #63 ===
+Input size: 1024, k: 512
+=== Call #63 completed ===
+Result: 1.124123
+=== kthLargest call #64 ===
+Input size: 1024, k: 512
+=== Call #64 completed ===
+Result: 1.124123
+=== kthLargest call #65 ===
+Input size: 1024, k: 512
+=== Call #65 completed ===
+Result: 1.124123
+=== kthLargest call #66 ===
+Input size: 1024, k: 512
+=== Call #66 completed ===
+Result: 1.124123
+Testase #6
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       24.330759 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #67 ===
+Input size: 2048, k: 2047
+=== Call #67 completed ===
+Result: 679
+=== kthLargest call #68 ===
+Input size: 2048, k: 2047
+=== Call #68 completed ===
+Result: 679
+=== kthLargest call #69 ===
+Input size: 2048, k: 2047
+=== Call #69 completed ===
+Result: 679
+=== kthLargest call #70 ===
+Input size: 2048, k: 2047
+=== Call #70 completed ===
+Result: 679
+=== kthLargest call #71 ===
+Input size: 2048, k: 2047
+=== Call #71 completed ===
+Result: 679
+=== kthLargest call #72 ===
+Input size: 2048, k: 2047
+=== Call #72 completed ===
+Result: 679
+=== kthLargest call #73 ===
+Input size: 2048, k: 2047
+=== Call #73 completed ===
+Result: 679
+=== kthLargest call #74 ===
+Input size: 2048, k: 2047
+=== Call #74 completed ===
+Result: 679
+=== kthLargest call #75 ===
+Input size: 2048, k: 2047
+=== Call #75 completed ===
+Result: 679
+=== kthLargest call #76 ===
+Input size: 2048, k: 2047
+=== Call #76 completed ===
+Result: 679
+=== kthLargest call #77 ===
+Input size: 2048, k: 2047
+=== Call #77 completed ===
+Result: 679
+Testase #7
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       96.673634 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #67 ===
+Input size: 2048, k: 2047
+=== Call #67 completed ===
+Result: -98.845024
+=== kthLargest call #68 ===
+Input size: 2048, k: 2047
+=== Call #68 completed ===
+Result: -98.845024
+=== kthLargest call #69 ===
+Input size: 2048, k: 2047
+=== Call #69 completed ===
+Result: -98.845024
+=== kthLargest call #70 ===
+Input size: 2048, k: 2047
+=== Call #70 completed ===
+Result: -98.845024
+=== kthLargest call #71 ===
+Input size: 2048, k: 2047
+=== Call #71 completed ===
+Result: -98.845024
+=== kthLargest call #72 ===
+Input size: 2048, k: 2047
+=== Call #72 completed ===
+Result: -98.845024
+=== kthLargest call #73 ===
+Input size: 2048, k: 2047
+=== Call #73 completed ===
+Result: -98.845024
+=== kthLargest call #74 ===
+Input size: 2048, k: 2047
+=== Call #74 completed ===
+Result: -98.845024
+=== kthLargest call #75 ===
+Input size: 2048, k: 2047
+=== Call #75 completed ===
+Result: -98.845024
+=== kthLargest call #76 ===
+Input size: 2048, k: 2047
+=== Call #76 completed ===
+Result: -98.845024
+=== kthLargest call #77 ===
+Input size: 2048, k: 2047
+=== Call #77 completed ===
+Result: -98.845024
+Testase #7
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       96.840088 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #78 ===
+Input size: 4781, k: 169
+=== Call #78 completed ===
+Result: 967123
+=== kthLargest call #79 ===
+Input size: 4781, k: 169
+=== Call #79 completed ===
+Result: 967123
+=== kthLargest call #80 ===
+Input size: 4781, k: 169
+=== Call #80 completed ===
+Result: 967123
+=== kthLargest call #81 ===
+Input size: 4781, k: 169
+=== Call #81 completed ===
+Result: 967123
+=== kthLargest call #82 ===
+Input size: 4781, k: 169
+=== Call #82 completed ===
+Result: 967123
+=== kthLargest call #83 ===
+Input size: 4781, k: 169
+=== Call #83 completed ===
+Result: 967123
+=== kthLargest call #84 ===
+Input size: 4781, k: 169
+=== Call #84 completed ===
+Result: 967123
+=== kthLargest call #85 ===
+Input size: 4781, k: 169
+=== Call #85 completed ===
+Result: 967123
+=== kthLargest call #86 ===
+Input size: 4781, k: 169
+=== Call #86 completed ===
+Result: 967123
+=== kthLargest call #87 ===
+Input size: 4781, k: 169
+=== Call #87 completed ===
+Result: 967123
+=== kthLargest call #88 ===
+Input size: 4781, k: 169
+=== Call #88 completed ===
+Result: 967123
+Testase #8
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       8.127212 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #78 ===
+Input size: 4781, k: 169
+=== Call #78 completed ===
+Result: 93.458191
+=== kthLargest call #79 ===
+Input size: 4781, k: 169
+=== Call #79 completed ===
+Result: 93.458191
+=== kthLargest call #80 ===
+Input size: 4781, k: 169
+=== Call #80 completed ===
+Result: 93.458191
+=== kthLargest call #81 ===
+Input size: 4781, k: 169
+=== Call #81 completed ===
+Result: 93.458191
+=== kthLargest call #82 ===
+Input size: 4781, k: 169
+=== Call #82 completed ===
+Result: 93.458191
+=== kthLargest call #83 ===
+Input size: 4781, k: 169
+=== Call #83 completed ===
+Result: 93.458191
+=== kthLargest call #84 ===
+Input size: 4781, k: 169
+=== Call #84 completed ===
+Result: 93.458191
+=== kthLargest call #85 ===
+Input size: 4781, k: 169
+=== Call #85 completed ===
+Result: 93.458191
+=== kthLargest call #86 ===
+Input size: 4781, k: 169
+=== Call #86 completed ===
+Result: 93.458191
+=== kthLargest call #87 ===
+Input size: 4781, k: 169
+=== Call #87 completed ===
+Result: 93.458191
+=== kthLargest call #88 ===
+Input size: 4781, k: 169
+=== Call #88 completed ===
+Result: 93.458191
+Testase #8
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       8.179263 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #89 ===
+Input size: 16384, k: 8192
+=== Call #89 completed ===
+Result: 499382
+=== kthLargest call #90 ===
+Input size: 16384, k: 8192
+=== Call #90 completed ===
+Result: 499382
+=== kthLargest call #91 ===
+Input size: 16384, k: 8192
+=== Call #91 completed ===
+Result: 499382
+=== kthLargest call #92 ===
+Input size: 16384, k: 8192
+=== Call #92 completed ===
+Result: 499382
+=== kthLargest call #93 ===
+Input size: 16384, k: 8192
+=== Call #93 completed ===
+Result: 499382
+=== kthLargest call #94 ===
+Input size: 16384, k: 8192
+=== Call #94 completed ===
+Result: 499382
+=== kthLargest call #95 ===
+Input size: 16384, k: 8192
+=== Call #95 completed ===
+Result: 499382
+=== kthLargest call #96 ===
+Input size: 16384, k: 8192
+=== Call #96 completed ===
+Result: 499382
+=== kthLargest call #97 ===
+Input size: 16384, k: 8192
+=== Call #97 completed ===
+Result: 499382
+=== kthLargest call #98 ===
+Input size: 16384, k: 8192
+=== Call #98 completed ===
+Result: 499382
+=== kthLargest call #99 ===
+Input size: 16384, k: 8192
+=== Call #99 completed ===
+Result: 499382
+Testase #9
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       386.577152 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #89 ===
+Input size: 16384, k: 8192
+=== Call #89 completed ===
+Result: 0.386917
+=== kthLargest call #90 ===
+Input size: 16384, k: 8192
+=== Call #90 completed ===
+Result: 0.386917
+=== kthLargest call #91 ===
+Input size: 16384, k: 8192
+=== Call #91 completed ===
+Result: 0.386917
+=== kthLargest call #92 ===
+Input size: 16384, k: 8192
+=== Call #92 completed ===
+Result: 0.386917
+=== kthLargest call #93 ===
+Input size: 16384, k: 8192
+=== Call #93 completed ===
+Result: 0.386917
+=== kthLargest call #94 ===
+Input size: 16384, k: 8192
+=== Call #94 completed ===
+Result: 0.386917
+=== kthLargest call #95 ===
+Input size: 16384, k: 8192
+=== Call #95 completed ===
+Result: 0.386917
+=== kthLargest call #96 ===
+Input size: 16384, k: 8192
+=== Call #96 completed ===
+Result: 0.386917
+=== kthLargest call #97 ===
+Input size: 16384, k: 8192
+=== Call #97 completed ===
+Result: 0.386917
+=== kthLargest call #98 ===
+Input size: 16384, k: 8192
+=== Call #98 completed ===
+Result: 0.386917
+=== kthLargest call #99 ===
+Input size: 16384, k: 8192
+=== Call #99 completed ===
+Result: 0.386917
+Testase #9
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       389.392061 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #100 ===
+Input size: 16384, k: 1
+=== Call #100 completed ===
+Result: 999849
+=== kthLargest call #101 ===
+Input size: 16384, k: 1
+=== Call #101 completed ===
+Result: 999849
+=== kthLargest call #102 ===
+Input size: 16384, k: 1
+=== Call #102 completed ===
+Result: 999849
+=== kthLargest call #103 ===
+Input size: 16384, k: 1
+=== Call #103 completed ===
+Result: 999849
+=== kthLargest call #104 ===
+Input size: 16384, k: 1
+=== Call #104 completed ===
+Result: 999849
+=== kthLargest call #105 ===
+Input size: 16384, k: 1
+=== Call #105 completed ===
+Result: 999849
+=== kthLargest call #106 ===
+Input size: 16384, k: 1
+=== Call #106 completed ===
+Result: 999849
+=== kthLargest call #107 ===
+Input size: 16384, k: 1
+=== Call #107 completed ===
+Result: 999849
+=== kthLargest call #108 ===
+Input size: 16384, k: 1
+=== Call #108 completed ===
+Result: 999849
+=== kthLargest call #109 ===
+Input size: 16384, k: 1
+=== Call #109 completed ===
+Result: 999849
+=== kthLargest call #110 ===
+Input size: 16384, k: 1
+=== Call #110 completed ===
+Result: 999849
+Testase #10
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.208428 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #100 ===
+Input size: 16384, k: 1
+=== Call #100 completed ===
+Result: 99.970001
+=== kthLargest call #101 ===
+Input size: 16384, k: 1
+=== Call #101 completed ===
+Result: 99.970001
+=== kthLargest call #102 ===
+Input size: 16384, k: 1
+=== Call #102 completed ===
+Result: 99.970001
+=== kthLargest call #103 ===
+Input size: 16384, k: 1
+=== Call #103 completed ===
+Result: 99.970001
+=== kthLargest call #104 ===
+Input size: 16384, k: 1
+=== Call #104 completed ===
+Result: 99.970001
+=== kthLargest call #105 ===
+Input size: 16384, k: 1
+=== Call #105 completed ===
+Result: 99.970001
+=== kthLargest call #106 ===
+Input size: 16384, k: 1
+=== Call #106 completed ===
+Result: 99.970001
+=== kthLargest call #107 ===
+Input size: 16384, k: 1
+=== Call #107 completed ===
+Result: 99.970001
+=== kthLargest call #108 ===
+Input size: 16384, k: 1
+=== Call #108 completed ===
+Result: 99.970001
+=== kthLargest call #109 ===
+Input size: 16384, k: 1
+=== Call #109 completed ===
+Result: 99.970001
+=== kthLargest call #110 ===
+Input size: 16384, k: 1
+=== Call #110 completed ===
+Result: 99.970001
+Testase #10
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.208347 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #111 ===
+Input size: 16384, k: 16384
+=== Call #111 completed ===
+Result: -88
+=== kthLargest call #112 ===
+Input size: 16384, k: 16384
+=== Call #112 completed ===
+Result: -88
+=== kthLargest call #113 ===
+Input size: 16384, k: 16384
+=== Call #113 completed ===
+Result: -88
+=== kthLargest call #114 ===
+Input size: 16384, k: 16384
+=== Call #114 completed ===
+Result: -88
+=== kthLargest call #115 ===
+Input size: 16384, k: 16384
+=== Call #115 completed ===
+Result: -88
+=== kthLargest call #116 ===
+Input size: 16384, k: 16384
+=== Call #116 completed ===
+Result: -88
+=== kthLargest call #117 ===
+Input size: 16384, k: 16384
+=== Call #117 completed ===
+Result: -88
+=== kthLargest call #118 ===
+Input size: 16384, k: 16384
+=== Call #118 completed ===
+Result: -88
+=== kthLargest call #119 ===
+Input size: 16384, k: 16384
+=== Call #119 completed ===
+Result: -88
+=== kthLargest call #120 ===
+Input size: 16384, k: 16384
+=== Call #120 completed ===
+Result: -88
+=== kthLargest call #121 ===
+Input size: 16384, k: 16384
+=== Call #121 completed ===
+Result: -88
+Testase #11
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       772.412170 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #111 ===
+Input size: 16384, k: 16384
+=== Call #111 completed ===
+Result: -98.997681
+=== kthLargest call #112 ===
+Input size: 16384, k: 16384
+=== Call #112 completed ===
+Result: -98.997681
+=== kthLargest call #113 ===
+Input size: 16384, k: 16384
+=== Call #113 completed ===
+Result: -98.997681
+=== kthLargest call #114 ===
+Input size: 16384, k: 16384
+=== Call #114 completed ===
+Result: -98.997681
+=== kthLargest call #115 ===
+Input size: 16384, k: 16384
+=== Call #115 completed ===
+Result: -98.997681
+=== kthLargest call #116 ===
+Input size: 16384, k: 16384
+=== Call #116 completed ===
+Result: -98.997681
+=== kthLargest call #117 ===
+Input size: 16384, k: 16384
+=== Call #117 completed ===
+Result: -98.997681
+=== kthLargest call #118 ===
+Input size: 16384, k: 16384
+=== Call #118 completed ===
+Result: -98.997681
+=== kthLargest call #119 ===
+Input size: 16384, k: 16384
+=== Call #119 completed ===
+Result: -98.997681
+=== kthLargest call #120 ===
+Input size: 16384, k: 16384
+=== Call #120 completed ===
+Result: -98.997681
+=== kthLargest call #121 ===
+Input size: 16384, k: 16384
+=== Call #121 completed ===
+Result: -98.997681
+Testase #11
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       778.430059 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #122 ===
+Input size: 16384, k: 100
+=== Call #122 completed ===
+Result: 993783
+=== kthLargest call #123 ===
+Input size: 16384, k: 100
+=== Call #123 completed ===
+Result: 993783
+=== kthLargest call #124 ===
+Input size: 16384, k: 100
+=== Call #124 completed ===
+Result: 993783
+=== kthLargest call #125 ===
+Input size: 16384, k: 100
+=== Call #125 completed ===
+Result: 993783
+=== kthLargest call #126 ===
+Input size: 16384, k: 100
+=== Call #126 completed ===
+Result: 993783
+=== kthLargest call #127 ===
+Input size: 16384, k: 100
+=== Call #127 completed ===
+Result: 993783
+=== kthLargest call #128 ===
+Input size: 16384, k: 100
+=== Call #128 completed ===
+Result: 993783
+=== kthLargest call #129 ===
+Input size: 16384, k: 100
+=== Call #129 completed ===
+Result: 993783
+=== kthLargest call #130 ===
+Input size: 16384, k: 100
+=== Call #130 completed ===
+Result: 993783
+=== kthLargest call #131 ===
+Input size: 16384, k: 100
+=== Call #131 completed ===
+Result: 993783
+=== kthLargest call #132 ===
+Input size: 16384, k: 100
+=== Call #132 completed ===
+Result: 993783
+Testase #12
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       4.859706 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #122 ===
+Input size: 16384, k: 100
+=== Call #122 completed ===
+Result: 98.763000
+=== kthLargest call #123 ===
+Input size: 16384, k: 100
+=== Call #123 completed ===
+Result: 98.763000
+=== kthLargest call #124 ===
+Input size: 16384, k: 100
+=== Call #124 completed ===
+Result: 98.763000
+=== kthLargest call #125 ===
+Input size: 16384, k: 100
+=== Call #125 completed ===
+Result: 98.763000
+=== kthLargest call #126 ===
+Input size: 16384, k: 100
+=== Call #126 completed ===
+Result: 98.763000
+=== kthLargest call #127 ===
+Input size: 16384, k: 100
+=== Call #127 completed ===
+Result: 98.763000
+=== kthLargest call #128 ===
+Input size: 16384, k: 100
+=== Call #128 completed ===
+Result: 98.763000
+=== kthLargest call #129 ===
+Input size: 16384, k: 100
+=== Call #129 completed ===
+Result: 98.763000
+=== kthLargest call #130 ===
+Input size: 16384, k: 100
+=== Call #130 completed ===
+Result: 98.763000
+=== kthLargest call #131 ===
+Input size: 16384, k: 100
+=== Call #131 completed ===
+Result: 98.763000
+=== kthLargest call #132 ===
+Input size: 16384, k: 100
+=== Call #132 completed ===
+Result: 98.763000
+Testase #12
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       4.914130 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #133 ===
+Input size: 16384, k: 1000
+=== Call #133 completed ===
+Result: 937102
+=== kthLargest call #134 ===
+Input size: 16384, k: 1000
+=== Call #134 completed ===
+Result: 937102
+=== kthLargest call #135 ===
+Input size: 16384, k: 1000
+=== Call #135 completed ===
+Result: 937102
+=== kthLargest call #136 ===
+Input size: 16384, k: 1000
+=== Call #136 completed ===
+Result: 937102
+=== kthLargest call #137 ===
+Input size: 16384, k: 1000
+=== Call #137 completed ===
+Result: 937102
+=== kthLargest call #138 ===
+Input size: 16384, k: 1000
+=== Call #138 completed ===
+Result: 937102
+=== kthLargest call #139 ===
+Input size: 16384, k: 1000
+=== Call #139 completed ===
+Result: 937102
+=== kthLargest call #140 ===
+Input size: 16384, k: 1000
+=== Call #140 completed ===
+Result: 937102
+=== kthLargest call #141 ===
+Input size: 16384, k: 1000
+=== Call #141 completed ===
+Result: 937102
+=== kthLargest call #142 ===
+Input size: 16384, k: 1000
+=== Call #142 completed ===
+Result: 937102
+=== kthLargest call #143 ===
+Input size: 16384, k: 1000
+=== Call #143 completed ===
+Result: 937102
+Testase #13
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       47.320357 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #133 ===
+Input size: 16384, k: 1000
+=== Call #133 completed ===
+Result: 87.484680
+=== kthLargest call #134 ===
+Input size: 16384, k: 1000
+=== Call #134 completed ===
+Result: 87.484680
+=== kthLargest call #135 ===
+Input size: 16384, k: 1000
+=== Call #135 completed ===
+Result: 87.484680
+=== kthLargest call #136 ===
+Input size: 16384, k: 1000
+=== Call #136 completed ===
+Result: 87.484680
+=== kthLargest call #137 ===
+Input size: 16384, k: 1000
+=== Call #137 completed ===
+Result: 87.484680
+=== kthLargest call #138 ===
+Input size: 16384, k: 1000
+=== Call #138 completed ===
+Result: 87.484680
+=== kthLargest call #139 ===
+Input size: 16384, k: 1000
+=== Call #139 completed ===
+Result: 87.484680
+=== kthLargest call #140 ===
+Input size: 16384, k: 1000
+=== Call #140 completed ===
+Result: 87.484680
+=== kthLargest call #141 ===
+Input size: 16384, k: 1000
+=== Call #141 completed ===
+Result: 87.484680
+=== kthLargest call #142 ===
+Input size: 16384, k: 1000
+=== Call #142 completed ===
+Result: 87.484680
+=== kthLargest call #143 ===
+Input size: 16384, k: 1000
+=== Call #143 completed ===
+Result: 87.484680
+Testase #13
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       47.721398 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #144 ===
+Input size: 131072, k: 1281
+=== Call #144 completed ===
+Result: 990221
+=== kthLargest call #145 ===
+Input size: 131072, k: 1281
+=== Call #145 completed ===
+Result: 990221
+=== kthLargest call #146 ===
+Input size: 131072, k: 1281
+=== Call #146 completed ===
+Result: 990221
+=== kthLargest call #147 ===
+Input size: 131072, k: 1281
+=== Call #147 completed ===
+Result: 990221
+=== kthLargest call #148 ===
+Input size: 131072, k: 1281
+=== Call #148 completed ===
+Result: 990221
+=== kthLargest call #149 ===
+Input size: 131072, k: 1281
+=== Call #149 completed ===
+Result: 990221
+=== kthLargest call #150 ===
+Input size: 131072, k: 1281
+=== Call #150 completed ===
+Result: 990221
+=== kthLargest call #151 ===
+Input size: 131072, k: 1281
+=== Call #151 completed ===
+Result: 990221
+=== kthLargest call #152 ===
+Input size: 131072, k: 1281
+=== Call #152 completed ===
+Result: 990221
+=== kthLargest call #153 ===
+Input size: 131072, k: 1281
+=== Call #153 completed ===
+Result: 990221
+=== kthLargest call #154 ===
+Input size: 131072, k: 1281
+=== Call #154 completed ===
+Result: 990221
+Testase #14
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       58.136898 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #144 ===
+Input size: 131072, k: 1281
+=== Call #144 completed ===
+Result: 98.054276
+=== kthLargest call #145 ===
+Input size: 131072, k: 1281
+=== Call #145 completed ===
+Result: 98.054276
+=== kthLargest call #146 ===
+Input size: 131072, k: 1281
+=== Call #146 completed ===
+Result: 98.054276
+=== kthLargest call #147 ===
+Input size: 131072, k: 1281
+=== Call #147 completed ===
+Result: 98.054276
+=== kthLargest call #148 ===
+Input size: 131072, k: 1281
+=== Call #148 completed ===
+Result: 98.054276
+=== kthLargest call #149 ===
+Input size: 131072, k: 1281
+=== Call #149 completed ===
+Result: 98.054276
+=== kthLargest call #150 ===
+Input size: 131072, k: 1281
+=== Call #150 completed ===
+Result: 98.054276
+=== kthLargest call #151 ===
+Input size: 131072, k: 1281
+=== Call #151 completed ===
+Result: 98.054276
+=== kthLargest call #152 ===
+Input size: 131072, k: 1281
+=== Call #152 completed ===
+Result: 98.054276
+=== kthLargest call #153 ===
+Input size: 131072, k: 1281
+=== Call #153 completed ===
+Result: 98.054276
+=== kthLargest call #154 ===
+Input size: 131072, k: 1281
+=== Call #154 completed ===
+Result: 98.054276
+Testase #14
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       61.690834 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #155 ===
+Input size: 131072, k: 67298
+=== Call #155 completed ===
+Result: 487616
+=== kthLargest call #156 ===
+Input size: 131072, k: 67298
+=== Call #156 completed ===
+Result: 487616
+=== kthLargest call #157 ===
+Input size: 131072, k: 67298
+=== Call #157 completed ===
+Result: 487616
+=== kthLargest call #158 ===
+Input size: 131072, k: 67298
+=== Call #158 completed ===
+Result: 487616
+=== kthLargest call #159 ===
+Input size: 131072, k: 67298
+=== Call #159 completed ===
+Result: 487616
+=== kthLargest call #160 ===
+Input size: 131072, k: 67298
+=== Call #160 completed ===
+Result: 487616
+=== kthLargest call #161 ===
+Input size: 131072, k: 67298
+=== Call #161 completed ===
+Result: 487616
+=== kthLargest call #162 ===
+Input size: 131072, k: 67298
+=== Call #162 completed ===
+Result: 487616
+=== kthLargest call #163 ===
+Input size: 131072, k: 67298
+=== Call #163 completed ===
+Result: 487616
+=== kthLargest call #164 ===
+Input size: 131072, k: 67298
+=== Call #164 completed ===
+Result: 487616
+=== kthLargest call #165 ===
+Input size: 131072, k: 67298
+=== Call #165 completed ===
+Result: 487616
+Testase #15
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       3037.372906 ms
+Verification:   [32mPassed[0m
+============================================================
+=== kthLargest call #155 ===
+Input size: 131072, k: 67298
+=== Call #155 completed ===
+Result: -1.937576
+=== kthLargest call #156 ===
+Input size: 131072, k: 67298
+=== Call #156 completed ===
+Result: -1.937576
+=== kthLargest call #157 ===
+Input size: 131072, k: 67298
+=== Call #157 completed ===
+Result: -1.937576
+=== kthLargest call #158 ===
+Input size: 131072, k: 67298
+=== Call #158 completed ===
+Result: -1.937576
+=== kthLargest call #159 ===
+Input size: 131072, k: 67298
+=== Call #159 completed ===
+Result: -1.937576
+=== kthLargest call #160 ===
+Input size: 131072, k: 67298
+=== Call #160 completed ===
+Result: -1.937576
+=== kthLargest call #161 ===
+Input size: 131072, k: 67298
+=== Call #161 completed ===
+Result: -1.937576
+=== kthLargest call #162 ===
+Input size: 131072, k: 67298
+=== Call #162 completed ===
+Result: -1.937576
+=== kthLargest call #163 ===
+Input size: 131072, k: 67298
+=== Call #163 completed ===
+Result: -1.937576
+=== kthLargest call #164 ===
+Input size: 131072, k: 67298
+=== Call #164 completed ===
+Result: -1.937576
+=== kthLargest call #165 ===
+Input size: 131072, k: 67298
+=== Call #165 completed ===
+Result: -1.937576
+Testase #15
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       3226.089094 ms
+Verification:   [32mPassed[0m
+============================================================
+
+=== Running Attention Tests ===
+============================================================
+=== flashAttention call #1 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #2 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #3 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #4 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #5 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #6 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #7 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #8 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #9 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #10 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #11 ===
+batch_size: 1, target_seq_len: 4, src_seq_len: 4, query_heads: 4, kv_heads: 2, head_dim: 2, is_causal: true
+computing tensor sizes...
+q_size: 32, k_size: 16, v_size: 16, o_size: 32
+Allocated output tensor of size: 32
+Copying data to device...
+Launching kernel...
+Grid: (1, 4, 1)
+Block: (128, 1, 1)
+Scale: 0.707107
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #1
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.192428 ms
+Max difference: 2.3842e-07
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #12 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #13 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #14 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #15 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #16 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #17 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #18 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #19 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #20 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #21 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #22 ===
+batch_size: 1, target_seq_len: 8, src_seq_len: 8, query_heads: 8, kv_heads: 4, head_dim: 4, is_causal: false
+computing tensor sizes...
+q_size: 256, k_size: 128, v_size: 128, o_size: 256
+Allocated output tensor of size: 256
+Copying data to device...
+Launching kernel...
+Grid: (1, 8, 1)
+Block: (64, 1, 1)
+Scale: 5e-01
+Kernel launched successfully
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #2
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.192828 ms
+Max difference: 3.3379e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #23 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #24 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #25 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #26 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #27 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #28 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #29 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #30 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #31 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #32 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #33 ===
+batch_size: 2, target_seq_len: 16, src_seq_len: 16, query_heads: 16, kv_heads: 8, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 4096, k_size: 2048, v_size: 2048, o_size: 4096
+Allocated output tensor of size: 4096
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #3
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.206299 ms
+Max difference: 3.6955e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #34 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #35 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #36 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #37 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #38 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #39 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #40 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #41 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #42 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #43 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #44 ===
+batch_size: 2, target_seq_len: 32, src_seq_len: 32, query_heads: 32, kv_heads: 16, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 32768, k_size: 16384, v_size: 16384, o_size: 32768
+Allocated output tensor of size: 32768
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #4
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.259495 ms
+Max difference: 8.1062e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #45 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #46 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #47 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #48 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #49 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #50 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #51 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #52 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #53 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #54 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #55 ===
+batch_size: 4, target_seq_len: 64, src_seq_len: 64, query_heads: 64, kv_heads: 32, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 524288, k_size: 262144, v_size: 262144, o_size: 524288
+Allocated output tensor of size: 524288
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #5
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       1.078786 ms
+Max difference: 2.1324e-05
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #56 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #57 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #58 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #59 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #60 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #61 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #62 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #63 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #64 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #65 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #66 ===
+batch_size: 1, target_seq_len: 1, src_seq_len: 1, query_heads: 1, kv_heads: 1, head_dim: 8, is_causal: true
+computing tensor sizes...
+q_size: 8, k_size: 8, v_size: 8, o_size: 8
+Allocated output tensor of size: 8
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #6
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.186878 ms
+Max difference: 0.0000e+00
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #67 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #68 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #69 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #70 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #71 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #72 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #73 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #74 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #75 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #76 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #77 ===
+batch_size: 2, target_seq_len: 4, src_seq_len: 6, query_heads: 6, kv_heads: 2, head_dim: 32, is_causal: true
+computing tensor sizes...
+q_size: 1536, k_size: 768, v_size: 768, o_size: 1536
+Allocated output tensor of size: 1536
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #7
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.190387 ms
+Max difference: 2.9802e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #78 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #79 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #80 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #81 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #82 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #83 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #84 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #85 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #86 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #87 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #88 ===
+batch_size: 1, target_seq_len: 3, src_seq_len: 3, query_heads: 8, kv_heads: 1, head_dim: 128, is_causal: false
+computing tensor sizes...
+q_size: 3072, k_size: 384, v_size: 384, o_size: 3072
+Allocated output tensor of size: 3072
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #8
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.197236 ms
+Max difference: 3.3379e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #89 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #90 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #91 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #92 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #93 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #94 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #95 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #96 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #97 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #98 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #99 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 4, kv_heads: 4, head_dim: 16, is_causal: false
+computing tensor sizes...
+q_size: 320, k_size: 320, v_size: 320, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #9
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.189663 ms
+Max difference: 2.1458e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #100 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #101 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #102 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #103 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #104 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #105 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #106 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #107 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #108 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #109 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #110 ===
+batch_size: 3, target_seq_len: 10, src_seq_len: 1, query_heads: 6, kv_heads: 2, head_dim: 24, is_causal: false
+computing tensor sizes...
+q_size: 4320, k_size: 144, v_size: 144, o_size: 4320
+Allocated output tensor of size: 4320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #10
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.199608 ms
+Max difference: 0.0000e+00
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #111 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #112 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #113 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #114 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #115 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #116 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #117 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #118 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #119 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #120 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #121 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 5, query_heads: 9, kv_heads: 3, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 720, k_size: 240, v_size: 240, o_size: 720
+Allocated output tensor of size: 720
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #11
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.189706 ms
+Max difference: 1.6987e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #122 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #123 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #124 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #125 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #126 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #127 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #128 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #129 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #130 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #131 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #132 ===
+batch_size: 1, target_seq_len: 5, src_seq_len: 2048, query_heads: 4, kv_heads: 2, head_dim: 16, is_causal: true
+computing tensor sizes...
+q_size: 320, k_size: 65536, v_size: 65536, o_size: 320
+Allocated output tensor of size: 320
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #12
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.650599 ms
+Max difference: 1.4901e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+=== flashAttention call #133 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #134 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #135 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #136 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #137 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #138 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #139 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #140 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #141 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #142 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+=== flashAttention call #143 ===
+batch_size: 2, target_seq_len: 64, src_seq_len: 1024, query_heads: 64, kv_heads: 32, head_dim: 128, is_causal: true
+computing tensor sizes...
+q_size: 1048576, k_size: 8388608, v_size: 8388608, o_size: 1048576
+Allocated output tensor of size: 1048576
+Copying data to device...
+Launching kernel...
+Kernel launched successfully1
+hello?
+Copying output data back to host...
+Testase #13
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       8.880975 ms
+Max difference: 1.7405e-05
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================

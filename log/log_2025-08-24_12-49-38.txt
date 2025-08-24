@@ -1,0 +1,358 @@
+=== Compiling student code (src/kernels.cu) ===
+nvcc                   -std=c++17 -O0         -c src/kernels.cu -o src/kernels.o
+=== Linking executable (student code + test logic) ===
+nvcc                   -std=c++17 -O0         -o test_kernels src/kernels.o tester/tester.o
+=== Running tests (output from tester.o) ===
+=== Verbose mode: Enabled (using '--verbose            ') ===
+./test_kernels     	   --verbose            
+Running tests on device: NVIDIA H800
+Max shared memory per block: 49152 bytes
+Malloc heap size: 134217728 bytes
+============================================================
+
+============================================================
+=== Running kthLargest Tests ===
+============================================================
+Testase #1
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.000020 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #1
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.000019 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #2
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.216175 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #2
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.208349 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #3
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.000012 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #3
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.000012 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #4
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.400379 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #4
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.398764 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #5
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       3.519561 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #5
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       3.498896 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #6
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       24.216253 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #6
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       24.243290 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #7
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       96.475111 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #7
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       96.632231 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #8
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       8.109242 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #8
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       8.178436 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #9
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       385.287439 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #9
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       388.575266 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #10
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.210632 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #10
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.210014 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #11
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       770.263677 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #11
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       776.998810 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #12
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       4.853813 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #12
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       4.908321 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #13
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       47.176846 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #13
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       47.614602 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #14
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       57.952522 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #14
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       61.593650 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #15
+Data type:      [36mint[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       3030.733750 ms
+Verification:   [32mPassed[0m
+============================================================
+Testase #15
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       3222.586533 ms
+Verification:   [32mPassed[0m
+============================================================
+
+=== Running Attention Tests ===
+============================================================
+Testase #1
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.189450 ms
+Max difference: 2.3842e-07
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #2
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.190325 ms
+Max difference: 3.3379e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #3
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.203929 ms
+Max difference: 3.6955e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #4
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.258319 ms
+Max difference: 8.1062e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #5
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       1.176497 ms
+Max difference: 2.1324e-05
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #6
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.199959 ms
+Max difference: 0.0000e+00
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #7
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.193029 ms
+Max difference: 2.9802e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #8
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.198032 ms
+Max difference: 3.3379e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #9
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.192960 ms
+Max difference: 2.1458e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #10
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.199408 ms
+Max difference: 0.0000e+00
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #11
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.191225 ms
+Max difference: 1.6987e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #12
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       0.486653 ms
+Max difference: 1.4901e-06
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
+Testase #13
+Data type:      [36mfloat[0m
+Warm-up iters:  1
+Profile iters:  10
+Avg time:       8.573526 ms
+Max difference: 1.7405e-05
+Absolute tol:   5e-05
+Relative tol:   5e-05
+Verification:   [32mPassed[0m
+============================================================
